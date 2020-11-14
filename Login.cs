@@ -35,7 +35,7 @@ namespace ExampleSQLApp
             if (authorized)
             {
                 this.Hide();
-                AdminPanel ap = new AdminPanel();
+                housingPanel ap = new housingPanel();
                 ap.Show();
 
             } 

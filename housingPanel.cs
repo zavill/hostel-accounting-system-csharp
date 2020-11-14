@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExampleSQLApp
 {
-    public partial class AdminPanel : Form
+    public partial class housingPanel : Form
     {
-        public AdminPanel()
+        public housingPanel()
         {
             InitializeComponent();
         }
@@ -123,6 +123,27 @@ namespace ExampleSQLApp
         private void dataGridView1_EditingControlShowing_1(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress += new KeyPressEventHandler(dataGridView1_KeyPress);
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void обзорToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            housingPanel hp = new housingPanel();
+            hp.Show();
+        }
+
+        private void обзорToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            studentsPanel sp = new studentsPanel();
+            sp.Show();
         }
     }
 }
