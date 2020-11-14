@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.hostelDataSet = new ExampleSQLApp.hostelDataSet();
             this.adminsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.adminsTableAdapter = new ExampleSQLApp.hostelDataSetTableAdapters.adminsTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.hostelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saveHousingGridData = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placesInRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,19 +69,33 @@
             this.roomsCount,
             this.placesInRoom,
             this.Delete});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(799, 397);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView1_EditingControlShowing_1);
             // 
             // hostelDataSetBindingSource
             // 
             this.hostelDataSetBindingSource.DataSource = this.hostelDataSet;
             this.hostelDataSetBindingSource.Position = 0;
             // 
+            // saveHousingGridData
+            // 
+            this.saveHousingGridData.Location = new System.Drawing.Point(586, 403);
+            this.saveHousingGridData.Name = "saveHousingGridData";
+            this.saveHousingGridData.Size = new System.Drawing.Size(202, 35);
+            this.saveHousingGridData.TabIndex = 1;
+            this.saveHousingGridData.Text = "Сохранить";
+            this.saveHousingGridData.UseVisualStyleBackColor = true;
+            this.saveHousingGridData.Click += new System.EventHandler(this.saveHousingGridData_Click);
+            // 
             // id
             // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.id.DefaultCellStyle = dataGridViewCellStyle2;
             this.id.HeaderText = "Корпус";
             this.id.Name = "id";
             // 
@@ -105,6 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.saveHousingGridData);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
@@ -123,6 +140,7 @@
         private hostelDataSetTableAdapters.adminsTableAdapter adminsTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource hostelDataSetBindingSource;
+        private System.Windows.Forms.Button saveHousingGridData;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomsCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn placesInRoom;

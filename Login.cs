@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ExampleSQLApp
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }

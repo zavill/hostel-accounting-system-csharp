@@ -1,6 +1,6 @@
 ﻿namespace ExampleSQLApp
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Обязательная переменная конструктора.
